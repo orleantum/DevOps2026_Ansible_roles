@@ -1,0 +1,12 @@
+---
+- name: Deploy Nginx
+  hosts: myhosts
+  remote_user: iadiyanov
+  become: yes
+  become_method: sudo
+
+  vars_files:
+    - vault.yml
+
+  roles:
+    - Nginx
